@@ -6,7 +6,7 @@ metadata:
     description: Application template for Angular Frontend application.
     tags: instant-app,angular
     version: 1.0.0
-  name: angular-frontend
+  name: frontend
 labels:
   template: frontend
 parameters:
@@ -21,7 +21,7 @@ parameters:
 - description: URL to the source code repository hosting your WebSphere Liberty application
     (e.g. https://github.com/sebastianfaulhaber/openshift-v3-showcase.git)
   name: SOURCE_REPOSITORY_URL
-  value: https://github.com/kennylucv/demo_frontend.git
+  value: https://github.com/BoZhaoUTSC/frontend.git
   required: true
 - description: Git branch/tag reference.
   name: SOURCE_REPOSITORY_REF
