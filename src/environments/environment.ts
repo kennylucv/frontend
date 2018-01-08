@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiURL: "http://backend-http-route-demo.192.168.99.101.nip.io"
+  apiURL: "http://backend-dev-environment.127.0.0.1.nip.io"
 };

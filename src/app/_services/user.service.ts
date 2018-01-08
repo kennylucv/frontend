@@ -29,7 +29,7 @@ export class UserService {
 
     getAccountForUser(username: string){
         let baseApiURL = environment.apiURL;
-        return this.http.get(baseApiURL + '/api/api/'+username).map((response: Response) => response.json());
+        return this.http.get(baseApiURL + '/backend/api/'+username).map((response: Response) => response.json());
     }
 
     // getUserInfo(username: string){

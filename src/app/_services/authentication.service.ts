@@ -20,7 +20,7 @@ export class AuthenticationService {
         let options = new RequestOptions({ headers: headers });
         let baseURL = environment.apiURL;
 
-        return this.http.post(baseURL + '/api/api/validate',
+        return this.http.post(baseURL + '/backend/api/validate',
             JSON.stringify({ username: username, password: password }),
             options
         )
