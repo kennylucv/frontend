@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/index';
 import { AuthGuard } from './_guards/index';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: '', component: HomeComponent},//, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
 
     // otherwise redirect to home
