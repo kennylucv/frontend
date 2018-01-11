@@ -2,10 +2,12 @@
 import { User }                 from '../_models/index';
 import { UserService }          from '../_services/index';
 import { NewsService }          from '../_services/index';
-
+import { HeaderComponent } from '../header/header.component';
 @Component({
     moduleId: module.id,
-    templateUrl: 'home.component.html'
+    selector: 'app-home',
+    templateUrl: 'home.component.html',
+    styleUrls: ['./home.scss']
 })
 
 export class HomeComponent implements OnInit {

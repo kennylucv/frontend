@@ -1,15 +1,10 @@
-﻿<head>
-    <style>
-        .floatLeft { width: 48%; float: left; }
-        .floatRight {width: 48%; float: right; }
-        .container { overflow: hidden; }
-    </style>
-</head>
+﻿<app-header></app-header>
 
 <div class="container">
-    <h1>Hi {{currentUser}}!</h1>
+    <h2 class="welcome">Hi {{currentUser}}!</h2>
+    <p class="center account-banner">Below are the accounts that you have:</p>
 
-    <div *ngIf="numberAccounts != 0" class="floatLeft"> 
+    <!--div *ngIf="numberAccounts != 0" class="floatLeft"> 
         <h3>Your Accounts:</h3>
 
         <table class="table table-striped" [mfData]="accountData" #mfAccounts="mfDataTable" [mfRowsOnPage]="5">
@@ -68,8 +63,286 @@
             </tr>
             </tfoot>
         </table>
-    </div> 
+    </div--> 
+
+    <div class="row">
+						<!-- Category list -->
+						<div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-money icon-bg-1"></i> 
+									<h4>Chequing</h4>
+									<p>$202000.00</p>
+								</div>
+								<ul class="category-list" *ngFor="let account of accountData">
+									<li><a href="category.html">{{account.type}} <span>{{account.amount}}</span></a></li>
+									
+									
+								</ul>
+							</div>
+						</div> <!-- /Category List -->
+						<!-- Category list -->
+						<div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-usd icon-bg-2"></i> 
+									<h4>Savings</h4>
+									<p>$234000.00</p>
+								</div>
+								<ul class="category-list">
+									<li><a href="category.html">High Interest <span>$55393.00</span></a></li>
+									<li><a href="category.html">Savings 2 <span>$25.00</span></a></li>
+									<li><a href="category.html">Savings 3  <span>$2657.00</span></a></li>
+									<li><a href="category.html">Savings 4<span>$4300.00</span></a></li>
+								</ul>
+							</div>
+						</div> <!-- /Category List -->
+						<!-- Category list -->
+						<div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-money icon-bg-3"></i> 
+									<h4>Credit Card</h4>
+									<p>$10000.00</p>
+								</div>
+								<ul class="category-list">
+									<li><a href="category.html">Shopping <span>$930.00</span></a></li>
+									<li><a href="category.html">Gas <span>$230.00</span></a></li>
+									<li><a href="category.html">Food  <span>$83.00</span></a></li>
+									<li><a href="category.html">Groceries 4<span>$33.00</span></a></li>
+								</ul>
+							</div>
+						</div> <!-- /Category List -->
+						<!-- Category list -->
+						<div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-usd icon-bg-4"></i> 
+									<h4>TFSA</h4>
+									<p>$15823.33</p>
+								</div>
+								<ul class="category-list">
+									<li><a href="category.html">Savings Deposit <span>$53.00</span></a></li>
+									<li><a href="category.html">GIC <span>$212.00</span></a></li>
+									<li><a href="category.html">Mutual Funds <span>$133.00</span></a></li>
+									<li><a href="category.html">RRSP <span>$14300.00</span></a></li>
+								</ul>
+							</div>
+						</div> <!-- /Category List -->
+						<!-- Category list -->
+						<!-- <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-briefcase icon-bg-5"></i> 
+									<h4></h4>
+								</div>
+								<ul class="category-list" >
+									<li><a href="category.html">It Jobs <span>93</span></a></li>
+									<li><a href="category.html">Cleaning & Washing <span>233</span></a></li>
+									<li><a href="category.html">Management  <span>183</span></a></li>
+									<li><a href="category.html">Voluntary Works <span>343</span></a></li>
+								</ul>
+							</div>
+						</div>  -->
+						<!-- /Category List -->
+						<!-- Category list -->
+						<!-- <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-car icon-bg-6"></i> 
+									<h4>Vehicles</h4>
+								</div>
+								<ul class="category-list" >
+									<li><a href="category.html">Bus <span>193</span></a></li>
+									<li><a href="category.html">Cars <span>23</span></a></li>
+									<li><a href="category.html">Motobike  <span>33</span></a></li>
+									<li><a href="category.html">Rent a car <span>73</span></a></li>
+								</ul>
+							</div>
+						</div>  -->
+						<!-- /Category List -->
+						<!-- Category list -->
+						<!-- <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-paw icon-bg-7"></i> 
+									<h4>Pets</h4>
+								</div>
+								<ul class="category-list" >
+									<li><a href="category.html">Cats <span>65</span></a></li>
+									<li><a href="category.html">Dogs <span>23</span></a></li>
+									<li><a href="category.html">Birds  <span>113</span></a></li>
+									<li><a href="category.html">Others <span>43</span></a></li>
+								</ul>
+							</div>
+						</div>  -->
+						<!-- /Category List -->
+						<!-- Category list -->
+						<!-- <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+							<div class="category-block">
+								<div class="header">
+									<i class="fa fa-laptop icon-bg-8"></i> 
+									<h4>Services</h4>
+								</div>
+								<ul class="category-list" >
+									<li><a href="category.html">Cleaning <span>93</span></a></li>
+									<li><a href="category.html">Car Washing <span>233</span></a></li>
+									<li><a href="category.html">Clothing  <span>183</span></a></li>
+									<li><a href="category.html">Business <span>343</span></a></li>
+								</ul>
+							</div>
+						</div> /Category List -->
+						
+						
+					</div>
 
 
-    <p><a [routerLink]="['/login']">Logout</a></p>
+    
 </div>
+
+<section class="popular-deals section bg-gray">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Trending Ads</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, magnam.</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <!-- offer 01 -->
+                <div class="col-sm-12 col-lg-4">
+                    <!-- product card -->
+    <div class="product-item bg-light">
+        <div class="card">
+            <div class="thumb-content">
+                <!-- <div class="price">$200</div> -->
+                <!-- <a href="">
+                    <img class="card-img-top img-fluid" src="images/products/products-1.jpg" alt="Card image cap">
+                </a> -->
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><a href="">Login History</a></h4>
+                <ul class="list-inline product-meta">
+                    <!-- <li class="list-inline-item">
+                        <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
+                    </li> -->
+                    <!-- <li class="list-inline-item">
+                        <a href=""><i class="fa fa-calendar"></i>26th December</a>
+                    </li> -->
+                </ul>
+                <p class="card-text">mobile  2' ago</p>
+                <p class="card-text">laptop  5' ago</p>
+                <div class="product-ratings">
+                    <!-- <ul class="list-inline">
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <!-- product card -->
+    <div class="product-item bg-light">
+        <div class="card">
+            <div class="thumb-content">
+                <!-- <div class="price">$200</div> -->
+                <a href="">
+                    <!-- <img class="card-img-top img-fluid" src="images/products/products-2.jpg" alt="Card image cap"> -->
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><a href="">News</a></h4>
+                <ul class="list-inline product-meta">
+                     <li class="list-inline-item"  *ngFor="let item of newsData ">
+                            
+                        <a href=""> <img src="{{item.urlToImage}}" width="100"></a>
+                    </li>
+                    <!-- <li class="list-inline-item">
+                        <a href=""><i class="fa fa-calendar"></i>26th December</a>
+                    </li> -->
+                </ul>
+               
+                <div class="product-ratings">
+                    <!-- <ul class="list-inline">
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <!-- product card -->
+    <div class="product-item bg-light">
+        <div class="card">
+            <div class="thumb-content">
+                <!-- <div class="price">$200</div> -->
+                <!-- <a href="">
+                    <img class="card-img-top img-fluid" src="images/products/products-3.jpg" alt="Card image cap">
+                </a> -->
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><a href="">Important Notices</a></h4>
+                <ul class="list-inline product-meta">
+                    <!-- <li class="list-inline-item">
+                        <a href=""><i class="fa fa-folder-open-o"></i>Electronics</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fa fa-calendar"></i>26th December</a>
+                    </li> -->
+                </ul>
+                <p class="card-text">You don't have any notice.</p>
+                <div class="product-ratings">
+                    <!-- <ul class="list-inline">
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+<footer class="footer section section-sm">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+            <div class="block about">
+            <h4>Disclosures</h4>
+            <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</footer>
+
+<app-footer></app-footer>
+
